@@ -39,8 +39,6 @@ input::placeholder{color:#a8918f}
 .btn-hero-arrow{position:relative;z-index:1;flex:0 0 auto;width:36px;height:36px;border-radius:50%;background:#5a3242;color:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;font-size:14px}
 .btn-hero-arrow span{display:inline-block;transition:transform .5s cubic-bezier(.16,1,.3,1)}
 .btn-hero:hover .btn-hero-arrow span{transform:translateX(3px) rotate(-45deg)}
-.btn-hero-shine{position:absolute;top:0;bottom:0;left:0;width:45%;background:linear-gradient(100deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.9) 50%,rgba(255,255,255,0) 100%);transform:translateX(-120%);pointer-events:none;animation:shine 4s infinite}
-@keyframes shine{0%{transform:translateX(-120%);animation-timing-function:cubic-bezier(.33,1,.68,1)}27.5%,100%{transform:translateX(260%)}}
 
 .scroll-cue{position:absolute;z-index:1;left:50%;bottom:clamp(20px,3vw,32px);transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;opacity:.6;transition:opacity .3s}
 .scroll-cue:hover{opacity:1}
@@ -144,27 +142,8 @@ input::placeholder{color:#a8918f}
 .planning .eyebrow{color:#f4e9e5;letter-spacing:.08em}
 .planning .eyebrow::before{background:#e8b49c}
 .planning h2{margin:0;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(40px,4.4vw,60px);line-height:1.05;color:#fff}
-.planning-week{font-size:12px;color:#ecdcd6;padding-bottom:10px}
-.days{position:relative;margin-top:36px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
-.day{height:38px;min-width:0;padding:0 4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;border:none;border-radius:999px;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;cursor:pointer;transition:background .25s,color .25s;background:rgba(255,255,255,.08);color:#e6d0cb}
-.day.is-active{background:#e8b49c;color:#5a3242}
-.sessions{position:relative;margin-top:48px}
-.sessions-head,.session{display:grid;grid-template-columns:84px minmax(0,1.6fr) minmax(0,1fr) minmax(0,1.2fr) 104px;gap:14px}
-.sessions-head{padding:0 10px 14px;font-size:10px;letter-spacing:.08em;color:#ccb2ad;border-bottom:1px solid rgba(255,255,255,.08)}
-.sessions-head span:last-child{text-align:center}
-.session{align-items:center;padding:24px 10px;border-bottom:1px solid rgba(255,255,255,.08)}
-.session-time{display:flex;flex-direction:column;gap:4px}
-.session-time strong{font-family:'Playfair Display',serif;font-weight:500;font-variant-numeric:lining-nums tabular-nums;font-size:22px;line-height:1;color:#fff}
-.session-time span{font-size:10px;color:#dcc4bf}
-.session-name{font-family:'Cormorant Garamond',serif;font-size:23px;line-height:1.1;color:#fff}
-.session-level{display:inline-block;font-size:10px;color:#e6d0cb;background:rgba(255,255,255,.08);padding:7px 12px;border-radius:999px;white-space:nowrap}
-.session-place{display:flex;align-items:center;gap:10px;font-size:12px;color:#dcc4bf}
-.session-place::before{content:"";width:5px;height:5px;border-radius:50%;background:#e6c1a4}
-.session-book{display:flex;justify-content:center}
-.btn-book{align-self:flex-start;height:40px;min-width:84px;padding:0 18px;border:none;border-radius:999px;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;cursor:pointer;background:#fff;color:#5a3242;transition:background .25s}
-.btn-book.is-booked{background:#e8b49c}
-.no-session{margin:0;padding:6px 10px 4px;font-size:13px;color:#dcc4bf}
-.private{margin-top:18px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 24px;padding:18px 18px 18px 24px;border-radius:18px;background:#e8b49c;color:#5a3242}
+.sessions{position:relative;margin-top:40px}
+.private{margin-top:0;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 24px;padding:18px 18px 18px 24px;border-radius:18px;background:#e8b49c;color:#5a3242}
 .private > div{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
 .private-title{font-family:'Cormorant Garamond',serif;font-size:24px;line-height:1.1;color:#5a3242;white-space:nowrap}
 .private-note{font-size:12px;font-weight:500;color:#5a3242;background:rgba(255,255,255,.4);padding:7px 12px;border-radius:999px}
@@ -177,19 +156,10 @@ input::placeholder{color:#a8918f}
 .planning-foot a{color:#e8b49c;font-weight:600}
 .planning-foot a:hover{color:#f3c9b5}
 @media (max-width:759px){
-  .sessions{margin-top:24px;display:flex;flex-direction:column}
-  .sessions-head{display:none}
-  .session{grid-template-columns:62px minmax(0,1fr);align-items:start;padding:20px 0}
-  .session-time strong{font-size:20px}
-  .session-info{display:flex;flex-direction:column;gap:10px}
-  .session-title{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px}
-  .session-level{padding:5px 10px}
-  .session-place{gap:8px}
-  .no-session{padding:4px 0}
-  .private{margin-top:16px;flex-wrap:nowrap;gap:12px;padding:12px 12px 12px 20px}
+  .sessions{margin-top:28px}
+  .private{flex-wrap:nowrap;gap:12px;padding:12px 12px 12px 20px}
   .private-title{font-size:23px}
 }
-@media (min-width:760px){.session-info,.session-title{display:contents}}
 
 /* ---------- La pratique ---------- */
 .practice{position:relative;overflow:hidden;padding:clamp(64px,8vw,100px) clamp(20px,4vw,48px) clamp(64px,8vw,110px);display:flex;justify-content:center}

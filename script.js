@@ -2,65 +2,6 @@
 (function () {
   'use strict';
 
-  /* ---------- Planning ---------- */
-  var DAYS = [['Lundi', 'Lun'], ['Mardi', 'Mar'], ['Mercredi', 'Mer'], ['Jeudi', 'Jeu'], ['Vendredi', 'Ven']];
-  var SCHEDULE = [
-    [{ time: '17:30', duration: '60 min', name: 'Yoga adapté', level: 'Tous niveaux', place: 'En ligne' }],
-    [{ time: '12:15', duration: '30 min', name: 'Méditation', level: 'Tous niveaux', place: 'En ligne' }],
-    [{ time: '12:15', duration: '30 min', name: 'Méditation', level: 'Tous niveaux', place: 'En ligne' },
-     { time: '18:45', duration: '60 min', name: 'Hatha yoga', level: 'Tous niveaux', place: 'En ligne' }],
-    [{ time: '12:15', duration: '30 min', name: 'Méditation', level: 'Tous niveaux', place: 'En ligne' }],
-    []
-  ];
-  var currentDay = 0;
-  var booked = {};
-  var daysEl = document.getElementById('days');
-  var sessionsEl = document.getElementById('sessions');
-  var headEl = document.getElementById('sessions-head');
-
-  function renderDays() {
-    daysEl.innerHTML = DAYS.map(function (d, i) {
-      return '<button class="day' + (i === currentDay ? ' is-active' : '') + '" role="tab" aria-selected="' + (i === currentDay) + '" data-day="' + i + '">' +
-        '<span class="only-desktop">' + d[0] + '</span><span class="only-mobile">' + d[1] + '</span></button>';
-    }).join('');
-  }
-
-  function renderSessions() {
-    var list = SCHEDULE[currentDay] || [];
-    headEl.style.visibility = list.length ? '' : 'hidden';
-    if (!list.length) {
-      sessionsEl.innerHTML = '<p class="no-session">Pas de cours collectif ce jour.</p>';
-      return;
-    }
-    sessionsEl.innerHTML = list.map(function (s, i) {
-      var key = currentDay + '-' + i, isBooked = !!booked[key];
-      return '<div class="session">' +
-        '<div class="session-time"><strong>' + s.time + '</strong><span>' + s.duration + '</span></div>' +
-        '<div class="session-info">' +
-          '<div class="session-title"><span class="session-name">' + s.name + '</span><div><span class="session-level">' + s.level + '</span></div></div>' +
-          '<span class="session-place">' + s.place + '</span>' +
-          '<div class="session-book"><button class="btn-book' + (isBooked ? ' is-booked' : '') + '" data-key="' + key + '">' + (isBooked ? 'Réservé ✓' : 'Réserver') + '</button></div>' +
-        '</div>' +
-      '</div>';
-    }).join('');
-  }
-
-  daysEl.addEventListener('click', function (e) {
-    var btn = e.target.closest('[data-day]');
-    if (!btn) return;
-    currentDay = +btn.dataset.day;
-    renderDays();
-    renderSessions();
-  });
-  sessionsEl.addEventListener('click', function (e) {
-    var btn = e.target.closest('[data-key]');
-    if (!btn) return;
-    booked[btn.dataset.key] = !booked[btn.dataset.key];
-    renderSessions();
-  });
-  renderDays();
-  renderSessions();
-
   /* ---------- Menu mobile ---------- */
   var menu = document.getElementById('menu');
   var openBtn = document.getElementById('menu-open');
