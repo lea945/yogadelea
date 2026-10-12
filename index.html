@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yogalea — Le yoga pour tous · Cours en ligne et ateliers à Strasbourg</title>
+  <meta name="description" content="Des cours de yoga accessibles pour retrouver de l'espace dans le corps, calmer l'esprit et avancer à votre propre rythme. Cours en ligne et ateliers à Strasbourg.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;family=Playfair+Display:wght@500&amp;family=DM+Sans:wght@400;500;600;700&amp;family=Geist:wght@400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="hero">
+    <canvas class="hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-veil" aria-hidden="true"></div>
+
+    <nav class="nav">
+      <a href="#" class="nav-logo" aria-label="Yogalea — accueil">
+        <img src="assets/logo3-blanc.png" alt="Yogalea — cours de yoga">
+      </a>
+      <div class="nav-right only-desktop">
+        <div class="nav-links">
+          <a href="#pratique">Pratique</a>
+          <a href="#cours">Cours</a>
+          <a href="#planning">Planning</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <a href="#planning" class="btn-nav">Réserver</a>
+      </div>
+      <button class="burger only-mobile" id="menu-open" aria-label="Ouvrir le menu" aria-controls="menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- Menu mobile -->
+    <div class="menu only-mobile" id="menu" aria-hidden="true">
+      <div class="menu-top">
+        <button class="menu-close" id="menu-close" aria-label="Fermer le menu"><span></span><span></span></button>
+        <img class="menu-logo" src="assets/logo3-prune.png" alt="Yogalea — cours de yoga">
+      </div>
+      <div class="menu-links">
+        <a href="#pratique" data-close-menu><span>01</span>Pratique</a>
+        <a href="#cours" data-close-menu><span>02</span>Cours</a>
+        <a href="#planning" data-close-menu><span>03</span>Planning</a>
+        <a href="#contact" data-close-menu><span>04</span>Contact</a>
+      </div>
+      <div class="menu-foot">
+        <a href="#planning" class="menu-cta" data-close-menu>Réserver un cours</a>
+        <div class="menu-contact">
+          <div class="socials">
+            <a href="#" class="social" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" class="social" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+            <a href="#" class="social" aria-label="TikTok"><i class="ph ph-tiktok-logo"></i></a>
+            <a href="mailto:leyogadelea@gmail.com" class="social" aria-label="Envoyer un email"><i class="ph ph-envelope-simple"></i></a>
+          </div>
+          <a href="mailto:leyogadelea@gmail.com" class="menu-mail">leyogadelea@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-content">
+      <span class="hero-badge">Yoga en ligne · Tous niveaux</span>
+      <h1>Le yoga<br><em>pour tous</em></h1>
+      <p class="hero-lead">Des cours accessibles pour retrouver de l'espace dans le corps, calmer l'esprit et avancer à votre propre rythme.</p>
+      <a href="#planning" class="btn-hero">
+        <span class="btn-hero-label">Réserver un cours</span>
+        <span class="btn-hero-arrow"><span>→</span></span>
+        <span class="btn-hero-shine" aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <a href="#pratique" class="scroll-cue" aria-label="Défiler vers le bas">
+      <span class="scroll-cue-label">DÉFILER</span>
+      <span class="scroll-cue-track"><span class="scroll-cue-dot"></span></span>
+    </a>
+  </header>
+
+  <main>
+    <!-- À propos -->
+    <section id="pratique" class="about">
+      <div class="about-grid">
+        <div class="about-text">
+          <span class="eyebrow">À PROPOS</span>
+          <h2><span>Une pratique <em>douce</em>,</span><br><span>adaptée à tous niveaux.</span></h2>
+          <p>Je m'appelle Léa. Formée au hatha yoga et au yoga sans dégâts de Gasquet, j'ai découvert cette pratique après des années de crises d'anxiété. Le souffle m'a rendu le calme et la confiance.</p>
+          <p class="muted">Aujourd'hui, je veux un yoga ouvert à toutes et tous, quels que soient le corps, l'origine ou le niveau, loin de l'image d'un yoga réservé à un certain type de personnes.</p>
+          <div class="tags">
+            <span class="tag">Écoute</span>
+            <span class="tag">Accessibilité</span>
+            <span class="tag">Ancrage</span>
+            <span class="tag">Curiosité</span>
+          </div>
+          <a href="#cours" class="btn-outline">Découvrir mon approche <span>↗</span></a>
+        </div>
+        <div class="photos">
+          <img class="photo photo--1" src="assets/photo-1.png" alt="Léa en posture de yoga">
+          <img class="photo photo--2" src="assets/photo-2.png" alt="Posture du chien tête en bas">
+          <div class="ring" aria-hidden="true">
+            <svg viewBox="0 0 100 100" width="100" height="100">
+              <defs><path id="ring" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"></path></defs>
+              <text><textPath href="#ring">COURS EN LIGNE · SÉANCES PRIVÉES ·</textPath></text>
+            </svg>
+            <span class="ring-dot"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cours -->
+    <section id="cours" class="courses">
+      <h2>Le yoga pour chaque corps<br>et chaque <em>esprit</em></h2>
+      <img class="courses-plant" src="assets/algue-beige.png" alt="" aria-hidden="true">
+      <p class="courses-sub">Trois pratiques pour trouver l'équilibre, la souplesse et le calme.</p>
+      <div class="cards">
+        <article class="card">
+          <div class="card-wash"></div>
+          <div class="card-top"><div class="card-icon">✿</div><span class="pill">En ligne</span></div>
+          <h3>Yoga <strong>doux</strong></h3>
+          <p class="card-sub">Ralentir et relâcher les tensions</p>
+          <p class="card-desc">Enchaînements de postures, travail musculaire et respiration pour détendre votre système nerveux.</p>
+          <div class="card-foot"><span class="card-level">Tous niveaux</span><a href="#planning" class="card-link"><span>Réserver un cours</span><span>→</span></a></div>
+        </article>
+        <article class="card card--apricot">
+          <div class="card-wash"></div>
+          <div class="card-top"><div class="card-icon">✦</div><span class="pill">En ligne</span></div>
+          <h3>Yoga <strong>adapté</strong></h3>
+          <p class="card-sub">Un yoga à votre mesure</p>
+          <p class="card-desc">Un cours lent, pensé pour les personnes en difficulté : mobilité douce et apaisement du mental.</p>
+          <div class="card-foot"><span class="card-level">Tous niveaux</span><a href="#planning" class="card-link"><span>Réserver un cours</span><span>→</span></a></div>
+        </article>
+        <article class="card card--lilac">
+          <div class="card-wash"></div>
+          <div class="card-top"><div class="card-icon">☽</div><span class="pill">En ligne</span></div>
+          <h3><strong>Méditation</strong></h3>
+          <p class="card-sub">Une pause pour l'esprit</p>
+          <p class="card-desc">Une pause à midi pour poser le mental, relâcher les muscles et apaiser les pensées.</p>
+          <div class="card-foot"><span class="card-level">Tous niveaux</span><a href="#planning" class="card-link"><span>Réserver un cours</span><span>→</span></a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Planning -->
+    <section id="planning" class="planning">
+      <div class="planning-box">
+        <div class="planning-circle" aria-hidden="true"></div>
+        <img class="planning-plant" src="assets/algue-blanc.png" alt="" aria-hidden="true">
+        <div class="planning-head">
+          <div>
+            <span class="eyebrow">LE PLANNING</span>
+            <h2>Votre rendez-vous<br>avec le souffle.</h2>
+          </div>
+          <span class="planning-week">Semaine du 5 au 9 octobre</span>
+        </div>
+
+        <div class="days" id="days" role="tablist" aria-label="Jours de la semaine"></div>
+
+        <div class="sessions">
+          <div class="sessions-head" id="sessions-head"><span>HEURE</span><span>COURS</span><span>NIVEAU</span><span>LIEU</span><span>PLACE</span></div>
+          <div id="sessions"></div>
+          <div class="private">
+            <div>
+              <span class="private-title">Cours privé</span>
+              <span class="private-note only-desktop">Horaire à définir ensemble</span>
+            </div>
+            <a href="#contact" class="btn-private"><span class="only-desktop">Demander un créneau →</span><span class="only-mobile">Réserver</span></a>
+          </div>
+        </div>
+
+        <div class="planning-foot">
+          <div>
+            <strong>Réservation au plus tard la veille du cours.</strong>
+            <span>Cours en ligne : le lien de connexion vous est envoyé la veille.</span>
+          </div>
+          <a href="mailto:leyogadelea@gmail.com">Une question ? Écrivez à Léa →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- La pratique -->
+    <section class="practice">
+      <div class="practice-grid">
+        <span class="eyebrow">LA PRATIQUE</span>
+        <div class="practice-text">
+          <h2>Apprenez à <strong>écouter votre corps</strong>,<br>que vous soyez <strong><em>débutant</em></strong><br>ou <strong>pratiquant confirmé</strong></h2>
+          <p>Ici, chaque corps est accueilli tel qu'il est. Léa transmet un yoga attentif, libre de performance et ancré dans le quotidien.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prochain atelier -->
+    <section id="atelier" class="atelier">
+      <div class="atelier-box">
+        <div class="atelier-left">
+          <span class="atelier-kicker">Hatha yoga · Strasbourg</span>
+          <h2>Prochain atelier<br><em>à réserver</em></h2>
+          <div class="atelier-info">
+            <div><span class="atelier-label">Au programme</span><p>Une heure de renforcement : un travail du corps et de l'esprit pour se calmer et se renforcer.</p></div>
+            <div><span class="atelier-label">Pour qui</span><p>Adapté à tous les niveaux, des débutants aux pratiquants confirmés.</p></div>
+          </div>
+          <div class="atelier-contact">
+            <span>Une question ? <a href="mailto:leyogadelea@gmail.com">leyogadelea@gmail.com</a></span>
+            <div class="socials socials--sm">
+              <a href="#" class="social" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+              <a href="#" class="social" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+              <a href="#" class="social" aria-label="TikTok"><i class="ph ph-tiktok-logo"></i></a>
+              <a href="mailto:leyogadelea@gmail.com" class="social" aria-label="Envoyer un email"><i class="ph ph-envelope-simple"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="ticket">
+          <div class="ticket-head">
+            <div>
+              <span class="ticket-date">Jeudi 29 octobre</span>
+              <h3>Hatha au <em>Gustave Doré</em></h3>
+            </div>
+            <div class="ticket-cal"><strong>29</strong><span>oct.</span></div>
+          </div>
+          <div class="ticket-rows">
+            <div><span>Date</span><span>Jeudi 29 octobre</span></div>
+            <div><span>Horaire</span><span>18:30 - 19:30</span></div>
+            <div><span>Lieu</span><span>Gymnase Gustave Doré<br>2 rue de Rangen, 67200 Strasbourg</span></div>
+            <div><span>Matériel</span><span>Non fourni, apportez votre tapis</span></div>
+          </div>
+          <a href="https://www.helloasso.com/associations/strasbourg-grs/evenements/hatha-yoga" target="_blank" rel="noopener" class="btn-ticket"><span>Réserver ma place</span><span>→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="newsletter-wrap">
+      <div class="newsletter">
+        <div class="newsletter-text">
+          <span class="newsletter-kicker">LA LETTRE DU SOUFFLE</span>
+          <h3>Restez au courant des nouveaux cours et ateliers.</h3>
+          <p>Restez au courant des dernières actualités des cours et ateliers donnés en visio ou en présentiel.</p>
+        </div>
+        <div class="newsletter-form-wrap">
+          <form class="newsletter-form" id="newsletter">
+            <label for="newsletter-email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);">Votre email</label>
+            <input type="email" id="newsletter-email" name="email" required placeholder="Votre email" autocomplete="email">
+            <button type="submit">S'INSCRIRE</button>
+          </form>
+          <span class="newsletter-thanks" id="newsletter-thanks" hidden>Merci — à très vite dans ta boîte.</span>
+          <span class="newsletter-note">Pas de spam. Désinscription en un clic.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-band">
+      <img class="footer-plant" src="assets/algue-blanc.png" alt="" aria-hidden="true">
+      <div class="footer-cols">
+        <div class="footer-brand">
+          <img src="assets/logo3-creme.png" alt="Yogalea — cours de yoga">
+          <span>Des cours accessibles pour retrouver de l'espace dans le corps, calmer l'esprit et avancer à votre propre rythme.</span>
+        </div>
+        <div>
+          <span class="footer-title">CONTACT</span>
+          <span>Strasbourg, France</span>
+          <a href="mailto:leyogadelea@gmail.com" class="underline">leyogadelea@gmail.com</a>
+        </div>
+        <div>
+          <span class="footer-title">SUIVRE</span>
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">TikTok</a>
+        </div>
+        <div>
+          <span class="footer-title">LIENS</span>
+          <a href="#cours">Cours</a>
+          <a href="#planning">Planning</a>
+          <a href="#pratique">À propos</a>
+          <a href="mentions-legales.html#mentions">Mentions légales</a>
+          <a href="mentions-legales.html#donnees">Données personnelles</a>
+        </div>
+      </div>
+      <div class="footer-copy">© 2026 YOGALEA · TOUS DROITS RÉSERVÉS</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
