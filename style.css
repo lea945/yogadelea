@@ -185,6 +185,9 @@ input::placeholder{color:#a8918f}
 .atelier-contact{width:100%;margin-top:auto;padding-top:20px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 20px;border-top:1px solid rgba(90,50,66,.14)}
 .atelier-contact > span{font-size:13px;color:#8a6f72}
 .atelier-contact > span a{color:#5a3242;font-weight:500;text-decoration:underline;text-underline-offset:3px}
+.atelier-social{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+.atelier-mail{font-size:12px;font-weight:500;color:#5a3242;text-decoration:underline;text-underline-offset:3px}
+.atelier-mail:hover{color:#94574d}
 .ticket{position:relative;overflow:hidden;flex:1 1 340px;background:#5a3242;color:#f6f2ec;border-radius:clamp(18px,2vw,24px);padding:clamp(22px,2.8vw,38px);display:flex;flex-direction:column;gap:22px}
 .ticket-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
 .ticket-head > div:first-child{display:flex;flex-direction:column;gap:8px;min-width:0}
