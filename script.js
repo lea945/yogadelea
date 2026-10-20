@@ -26,7 +26,7 @@
     var btn = form.querySelector('button');
     btn.disabled = true;
     function done() { form.hidden = true; thanks.hidden = false; }
-    fetch('https://formsubmit.co/ajax/leyogadelea@gmail.com', {
+    fetch('https://formsubmit.co/ajax/info@yogadelea.fr', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify({ email: email, _subject: 'Nouvelle inscription à la lettre Yogalea', _template: 'table' })
@@ -34,7 +34,7 @@
       if (!r.ok) throw new Error();
       done();
     }).catch(function () {
-      window.location.href = 'mailto:leyogadelea@gmail.com?subject=' + encodeURIComponent('Inscription à la lettre Yogalea') +
+      window.location.href = 'mailto:info@yogadelea.fr?subject=' + encodeURIComponent('Inscription à la lettre Yogalea') +
         '&body=' + encodeURIComponent('Je souhaite recevoir les actualités : ' + email);
       done();
     });
