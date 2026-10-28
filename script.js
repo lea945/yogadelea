@@ -2,6 +2,14 @@
 (function () {
   'use strict';
 
+  /* ---------- Planning : masquer les séances passées ---------- */
+  var now = new Date();
+  document.querySelectorAll('.event[data-date]').forEach(function (el) {
+    if (new Date(el.dataset.date + 'T23:59:59') < now) el.remove();
+  });
+  var eventsList = document.querySelector('.events');
+  if (eventsList && !eventsList.children.length) eventsList.remove();
+
   /* ---------- Menu mobile ---------- */
   var menu = document.getElementById('menu');
   var openBtn = document.getElementById('menu-open');
